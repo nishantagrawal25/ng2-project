@@ -7,22 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var router_1 = require("@angular/router");
+var app_routes_1 = require("./app.routes");
 var app_component_1 = require("./app.component");
 var navbar_component_1 = require("./components/navbar/navbar.component");
 var jumbotron_component_1 = require("./components/jumbotron/jumbotron.component");
 var home_component_1 = require("./components/pages/home.component");
 var about_component_1 = require("./components/pages/about.component");
-var routes = [
-    {
-        path: '',
-        component: home_component_1.HomeComponent
-    },
-    {
-        path: 'about',
-        component: about_component_1.AboutComponent
-    }
-];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -30,7 +20,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(routes)],
+        imports: [platform_browser_1.BrowserModule, app_routes_1.routing],
         declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, jumbotron_component_1.JumbotronComponent, home_component_1.HomeComponent, about_component_1.AboutComponent],
         bootstrap: [app_component_1.AppComponent]
     })
