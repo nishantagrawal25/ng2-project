@@ -6,21 +6,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { HomeComponent } from './components/pages/home.component';
 import { AboutComponent } from './components/pages/about.component';
-
-const routes: Routes = [
-    {
-        path: '',
-        component: HomeComponent
-    },
-    {
-      path: 'about',
-      component: AboutComponent
-    }
-]
+import { ProfileComponent } from './components/profile.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(routes) ],
-  declarations: [ AppComponent, NavbarComponent, JumbotronComponent, HomeComponent, AboutComponent ],
+  imports:      [ BrowserModule, HttpModule ],
+  declarations: [ AppComponent, NavbarComponent, JumbotronComponent, HomeComponent, AboutComponent, ProfileComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
