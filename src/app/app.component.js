@@ -15,8 +15,9 @@ var AppComponent = (function () {
 }());
 AppComponent = __decorate([
     core_1.Component({
+        moduleId: module.id,
         selector: 'my-app',
-        template: '<profile></profile>',
+        templateUrl: 'app.component.html',
         providers: [github_service_1.GithubService]
     })
 ], AppComponent);

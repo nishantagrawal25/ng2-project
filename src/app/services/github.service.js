@@ -15,11 +15,18 @@ var GithubService = (function () {
     function GithubService(_http) {
         this._http = _http;
         console.log('github service ready');
-        this.username = 'nishant';
+        this.username = 'nishantagrawal25';
     }
     GithubService.prototype.getUser = function () {
         return this._http.get('http://api.github.com/users/' + this.username)
             .map(function (res) { return res.json(); });
+    };
+    GithubService.prototype.getRepos = function () {
+        return this._http.get('http://api.github.com/users/' + this.username + '/repos')
+            .map(function (res) { return res.json(); });
+    };
+    GithubService.prototype.updateUser = function (username) {
+        this.username = username;
     };
     return GithubService;
 }());
